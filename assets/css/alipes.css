@@ -4954,7 +4954,9 @@ ul {
 
 .services-one__single-inner {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 49px 50px 45px;
   overflow: hidden;
   transition-delay: .1s;
@@ -4997,6 +4999,7 @@ ul {
 }
 
 .services-one__icon {
+  width: 70px;
   position: relative;
   display: inline-block;
   z-index: 1;
