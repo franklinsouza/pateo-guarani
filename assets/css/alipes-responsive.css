@@ -845,10 +845,6 @@
         margin-bottom: 60px;
     }
 
-    .about-two__year {
-        left: 19px;
-    }
-
     .services-one__left {
         margin-right: 0;
         margin-bottom: 50px;
@@ -1319,7 +1315,7 @@
 
 
     .main-menu-two__wrapper {
-        background-color: #252020;
+        background-color: var(--alipes-black);
     }
 
     .cta-one__left {
