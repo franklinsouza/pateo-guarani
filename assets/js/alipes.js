@@ -327,83 +327,83 @@
 
   $('[name="phone"]').mask('(00) 00000-0000');
 
-  if ($(".contact-form-validated").length) {
-    $(".contact-form-validated").validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        phone: {
-          required: true,
-          minlength: 8
-        },
-      },
-      messages: {
-        name: "Por favor, insira seu nome.",
-        email: "Insira um e-mail válido.",
-        phone: "Insira um telefone válido.",
-      },
-      submitHandler: function (form, event) {
-        event.preventDefault();
-        $('.contact-page__btn').prop("disabled", true);
-        $('.contact-page__btn').text('Enviando...');
+  // if ($(".contact-form-validated").length) {
+  //   $(".contact-form-validated").validate({
+  //     rules: {
+  //       name: {
+  //         required: true,
+  //         minlength: 2
+  //       },
+  //       email: {
+  //         required: true,
+  //         email: true
+  //       },
+  //       phone: {
+  //         required: true,
+  //         minlength: 8
+  //       },
+  //     },
+  //     messages: {
+  //       name: "Por favor, insira seu nome.",
+  //       email: "Insira um e-mail válido.",
+  //       phone: "Insira um telefone válido.",
+  //     },
+  //     submitHandler: function (form, event) {
+  //       event.preventDefault();
+  //       $('.contact-page__btn').prop("disabled", true);
+  //       $('.contact-page__btn').text('Enviando...');
 
-        let msg = $('.form-msg');
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+  //       let msg = $('.form-msg');
+  //       const formData = new FormData(form);
+  //       const data = Object.fromEntries(formData);
 
         
-        msg.removeClass('success error').text('');
+  //       msg.removeClass('success error').text('');
 
-        const payload = {
-          data: {
-            type: "lead",
-            attributes: {
-              source: "Landing Page",
-              name: data.name,
-              phone: data.phone,
-              email: data.email,
-            },
-          },
-        };
+  //       const payload = {
+  //         data: {
+  //           type: "lead",
+  //           attributes: {
+  //             source: "Landing Page",
+  //             name: data.name,
+  //             phone: data.phone,
+  //             email: data.email,
+  //           },
+  //         },
+  //       };
 
-        fetch('/api/send/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(payload)
-        })
-        .then(res => {
-          if (!res.ok){
-            throw new Error('Erro ao enviar');
-          } 
+  //       fetch('/api/send/', {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(payload)
+  //       })
+  //       .then(res => {
+  //         if (!res.ok){
+  //           throw new Error('Erro ao enviar');
+  //         } 
           
-          return res.json();
-        })
-        .then(response => {
-          if( response.success ){
-            form.reset();
-            msg.addClass('success').text('Formulário enviado com sucesso.');
-          }else {
-            msg.addClass('error').text('Erro ao enviar o formulário.');
-          }
-        })
-        .catch(err => {
-          console.error(err);
-          msg.addClass('error').text('Erro ao enviar o formulário.');
-        }).finally(function () {
-          $('.contact-page__btn').prop("disabled", false);
-          $('.contact-page__btn').text('Enviar');
-        });        
-      }
-    });
-  }
+  //         return res.json();
+  //       })
+  //       .then(response => {
+  //         if( response.success ){
+  //           form.reset();
+  //           msg.addClass('success').text('Formulário enviado com sucesso.');
+  //         }else {
+  //           msg.addClass('error').text('Erro ao enviar o formulário.');
+  //         }
+  //       })
+  //       .catch(err => {
+  //         console.error(err);
+  //         msg.addClass('error').text('Erro ao enviar o formulário.');
+  //       }).finally(function () {
+  //         $('.contact-page__btn').prop("disabled", false);
+  //         $('.contact-page__btn').text('Enviar');
+  //       });        
+  //     }
+  //   });
+  // }
 
   // mailchimp form
   if ($(".mc-form").length) {

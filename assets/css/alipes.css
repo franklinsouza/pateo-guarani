@@ -25,9 +25,9 @@
   --alipes-gray-rgb: 130, 126, 120;
   --alipes-white: #ffffff;
   --alipes-white-rgb: 255, 255, 255;
-  --alipes-base: #c19665;
+  --alipes-base: #837530;
   --alipes-base-rgb: 205, 140, 102;
-  --alipes-black: #252020;
+  --alipes-black: #2D2811;
   --alipes-black-rgb: 34, 28, 19;
   --alipes-primary: #f6f4f1;
   --alipes-primary-rgb: 246, 244, 241;
@@ -289,7 +289,7 @@ ul {
 .section-title__tagline {
   position: relative;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 23px;
   color: var(--alipes-base);
   font-weight: 500;
@@ -2004,7 +2004,8 @@ ul {
     right: 0;
     bottom: 0;
     content: "";
-    background-color: rgba(26, 21, 14, .60);
+    background-color: #312c12;
+    opacity: .6;
     display: none;
 }
 
@@ -2063,7 +2064,8 @@ ul {
 
 .main-slider-two__text {
   font-size: 23px;
-  color: var(--alipes-base);
+  color: var(--alipes-white);
+  /* color: var(--alipes-base); */
   line-height: 30px;
   font-weight: 500;
   font-family: var(--alipes-font-two);
@@ -4615,7 +4617,7 @@ ul {
   justify-content: center;
   text-align: center;
   color: var(--alipes-white);
-  background-color: #1a150e;
+  background-color: #82742E;
   font-size: 14px;
   border-radius: 50%;
   overflow: hidden;
@@ -4772,12 +4774,12 @@ ul {
 
 .about-two__year {
   position: absolute;
-  bottom: 65px;
-  left: -45px;
+  top: -20px;
+  right: -20px;
   background-color: var(--alipes-black);
   max-width: 242px;
   width: 100%;
-  padding: 25px 32px;
+  padding: 25px;
   z-index: 1;
 }
 
@@ -4814,10 +4816,10 @@ ul {
 }
 
 .about-two__year h3 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   color: var(--alipes-white);
-  line-height: 35px;
+  line-height: 33px;
 }
 
 .about-two__year p {
@@ -4883,7 +4885,7 @@ ul {
 .services-one {
   position: relative;
   display: block;
-  background-color: #f3eae0;
+  background-color: #E2C6A1;
   padding: 120px 0 90px;
   overflow: hidden;
   z-index: 1;
@@ -5106,7 +5108,7 @@ ul {
   left: 0;
   height: 400px;
   width: 20px;
-  background-color: var(--alipes-base);
+  background-color: #E2C5A0;
   content: "";
   z-index: 1;
 }
@@ -5727,7 +5729,7 @@ ul {
 }
 
 .cta-one__inner {
-  background-image: url('../images/granvista/banner-azevedo.webp');
+  background-image: url('../images/pateoguarani/banner-azevedo.webp');
   background-size: cover;
   background-color: #022353;
   position: relative;
@@ -12038,10 +12040,11 @@ body.boxed-wrapper {
 --------------------------------------------------------------*/
 .hero {
   height: 100vh;
-  background-image: url('../images/granvista/banner.webp');
+  background-color: #837530;
+  background-image: url('../images/pateoguarani/banner.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
+  background-position: 0vw top;
   display: flex;
   align-items: center;
 }
