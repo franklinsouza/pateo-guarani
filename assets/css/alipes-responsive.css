@@ -315,11 +315,9 @@
     }
 
     .about-two__year {
-        left: initial;
-        top: -15px;
-        bottom: initial;
+        top: 90px;
+        right: -20px;
         padding: 14px 30px;
-        right: 0;
     }
 
     .about-two__left {
