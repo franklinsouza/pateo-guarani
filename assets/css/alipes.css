@@ -708,6 +708,10 @@ ul {
   background-color: var(--alipes-black);
 }
 
+.stricky-header .logo-w {
+  display: none;
+}
+
 .main-menu .main-menu__list,
 .main-menu .main-menu__list>li>ul,
 .main-menu .main-menu__list>li>ul>li>ul,
@@ -1334,7 +1338,8 @@ ul {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--alipes-base);
+  background: #aa771c;
+  background: linear-gradient(90deg,#bf953f 0%, #deb97e 52%, #aa771c 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1479,6 +1484,10 @@ ul {
   width: 100%;
   transition: all 500ms ease;
   z-index: 999;
+}
+
+.main-header-two .logo-c {
+  display: none;
 }
 
 .main-header-two:before {
