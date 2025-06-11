@@ -397,10 +397,10 @@ ul {
   animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  background-image: url(../images/logo.webp);
+  background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 130px auto;
+  background-size: 210px auto;
   width: 100%;
   height: 100%;
 }
